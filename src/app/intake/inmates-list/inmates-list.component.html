@@ -1,0 +1,16 @@
+<ul *ngFor = "let dog of dogs">
+
+  <img src = "{{dog.imagePath}}"
+  alt = "{{dog.name}}"
+  class = "responsive"
+  style = "max-height: 100px">
+
+  <h4 class="list-group-item-heading" >
+    <a>{{dog.name}}</a>
+  </h4>
+  <p class = "list-group-item-text">
+    {{dog.desc}}
+  </p>
+  <!-- <button *ngFor = "" -->
+
+</ul>

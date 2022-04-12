@@ -1,7 +1,9 @@
-
-<ul class="heroes">
-  <li *ngFor = "let dog of dogs">
-    <span class="badge">{{dog.name}}</span> {{dog.desc}}
-
-  </li>
-</ul>
+<div class="div row">
+<div class="col-md-7" >
+  <h3 class = "addshelter"><a (click)="addInmate()"> Add to shelter </a></h3>
+  <app-list></app-list>
+</div>
+<div class="col-md-7">
+<router-outlet></router-outlet>
+</div>
+</div>

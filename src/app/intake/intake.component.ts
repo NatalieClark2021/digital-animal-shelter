@@ -7,12 +7,14 @@ import { DOGS } from './intake.service'
   styleUrls: ['./intake.component.css']
 })
 export class IntakeComponent implements OnInit {
-  dogs = DOGS;
+
 
   constructor() { }
 
   ngOnInit(): void {
 
   }
+  addInmate(){
 
+  }
 }
