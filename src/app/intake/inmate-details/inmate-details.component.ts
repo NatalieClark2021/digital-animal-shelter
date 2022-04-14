@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IntakeComponent } from '../intake.component';
 import { DOGS } from '../intake.service';
 
 @Component({
@@ -7,12 +9,18 @@ import { DOGS } from '../intake.service';
   styleUrls: ['./inmate-details.component.css']
 })
 export class InmateDetailsComponent implements OnInit {
-dogs2 = DOGS;
-  constructor() { }
+dogs = DOGS;
+indx: number;
+
+  constructor(
+    private router: ActivatedRoute
+
+    ) { }
 
 
 
   ngOnInit(): void {
+
   }
 
 }

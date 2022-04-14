@@ -1,9 +1,22 @@
-<div class="div row">
-<div class="col-md-7" >
+<!-- <div class="div row">
+<div class="col-md-12" >
   <h3 class = "addshelter"><a (click)="addInmate()"> Add to shelter </a></h3>
   <app-list></app-list>
 </div>
-<div class="col-md-7">
+<div class="row">
+<div class="col-md-12">
 <router-outlet></router-outlet>
+<app-inmate-details></app-inmate-details>
 </div>
 </div>
+</div> -->
+
+<div class="row">
+  <div class="col-md-6">
+    <app-list></app-list>
+  </div>
+  <div class="col-md-6">
+   <router-outlet></router-outlet>
+  </div>
+</div>
+
