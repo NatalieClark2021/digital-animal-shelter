@@ -1,5 +1,7 @@
-<ul *ngFor = "let dog of dogs">
-  <button>
+
+ <div class="container listOf" width=100%>
+<ul *ngFor = "let dog of DOGS">
+  <a [routerLink]="['inmate/', dog.id ]">
   <img src = "{{dog.imagePath}}"
   alt = "{{dog.name}}"
   class = "responsive"
@@ -11,7 +13,9 @@
   <p class = "list-group-item-text">
     {{dog.desc}}
   </p>
-</button>
-  <!-- <button *ngFor = "" -->
+</a>
+
 
 </ul>
+</div>
+

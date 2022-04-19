@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DOGS } from './intake.service'
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-intake',
@@ -9,7 +10,7 @@ import { DOGS } from './intake.service'
 export class IntakeComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private router: ActivatedRoute) { }
 
   ngOnInit(): void {
 

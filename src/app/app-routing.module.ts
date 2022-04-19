@@ -7,7 +7,7 @@ import { KeepersComponent } from "./keepers/keepers.component";
 const appRoutes: Routes = [
   {path: "", redirectTo: "/intake", pathMatch: "full"},
   { path: "intake", component: IntakeComponent,
-  children: [{path: '' , component: InmateDetailsComponent}]},
+  children: [{path: 'inmate/:id' , component: InmateDetailsComponent}]},
   { path: "keepers", component: KeepersComponent}
 ]
 

@@ -1,5 +1,8 @@
 import { Component, OnInit} from '@angular/core';
-import { DOGS } from '../intake.service'
+import { ActivatedRoute, Router } from '@angular/router';
+import { Dog } from '../intake.module';
+import { IntakeService } from '../intake.service';
+
 
 @Component({
   selector: 'app-list',
@@ -7,12 +10,16 @@ import { DOGS } from '../intake.service'
   styleUrls: ['./inmates-list.component.css']
 })
 export class InmateComponent implements OnInit {
-  dogs = DOGS;
+  DOGS : Dog[] = []
 
-  constructor() { }
+  constructor(
+    private intakeService: IntakeService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
-
+    this.DOGS = this.intakeService.getDogs();
   }
 
 }
