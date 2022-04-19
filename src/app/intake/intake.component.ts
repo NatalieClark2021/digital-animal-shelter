@@ -15,7 +15,7 @@ export class IntakeComponent implements OnInit {
   ngOnInit(): void {
 
   }
-  addInmate(){
+  // addInmate(){
 
-  }
+  // }
 }

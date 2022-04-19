@@ -1,6 +1,10 @@
 .listOf {
   display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+}
+
+.descOf {
+  word-wrap: break;
 }

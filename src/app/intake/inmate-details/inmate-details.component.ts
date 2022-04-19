@@ -29,7 +29,7 @@ constructor(
     ngOnInit(): void {
       this.route.params.subscribe((params: Params) => {
         this.idx = +params['id'];
-        this.dog = this.intakeService.getDog(this.idx);
+        this.dog = this.intakeService.getDog(this.idx-1);
       });
     }
 }

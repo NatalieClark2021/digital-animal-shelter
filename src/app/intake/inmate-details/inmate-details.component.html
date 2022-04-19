@@ -1,11 +1,15 @@
 
-<div class="row mb-3">
+<div>
   <div class="div col-md-12">
+  <div class="row">
+    <h2> Inmate number #{{ dog.id }} </h2>
+
+    <img src = "{{dog.imagePath}}">
+  </div>
+    <div class="row">
     <h1 > {{dog.name}} </h1>
-    <h2> {{ dog.id }} </h2>
-    <h3>The pic will go here</h3>
-    <h4> </h4>
-    <p> Doggie details</p>
+    <p> {{dog.desc}}</p>
+    </div>
   </div>
 </div>
 
