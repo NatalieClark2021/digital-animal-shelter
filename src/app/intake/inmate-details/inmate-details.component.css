@@ -1,0 +1,15 @@
+.dogSide {
+    display: flex;
+    /* flex-direction: row; */
+    flex-wrap: wrap;
+    /* align-items: flex-start; */
+  }
+
+.dogInfo {
+  padding-top: 75px;
+}
+
+.dogButtons {
+  padding-top: 120px;
+}
+
