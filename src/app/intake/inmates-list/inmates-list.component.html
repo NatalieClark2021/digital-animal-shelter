@@ -1,7 +1,8 @@
+
 <div class="container">
  <div class="col-md-6 listOf" >
-<ul class= "content" *ngFor = "let dog of DOGS">
-  <button [routerLink]="['inmate/', dog.id ]"
+<ul class= "content" *ngFor = "let dog of DOGS; let i = index">
+  <button [routerLink]="['inmate/', i ]"
   style = "height: 175px; width: 190px;">
   <img src = "{{dog.imagePath}}"
   alt = "{{dog.name}}"

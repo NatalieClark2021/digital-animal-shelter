@@ -1,3 +1,20 @@
+
+.intakeBack {
+
+  background-color:  #d1e8e2;
+}
+
+.intakeCol{
+  background-color: #fef9c7;
+  border: 5px solid #d1e8e2;;
+
+}
 .addshelter {
   border-style: ridge;
+}
+
+.sDwell {
+  padding-left: 80px;
+  display: flex;
+  justify-content: flex-start;
 }

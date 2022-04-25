@@ -3,13 +3,22 @@
     /* flex-direction: row; */
     flex-wrap: wrap;
     /* align-items: flex-start; */
+    background-color: #7d738b;
   }
 
 .dogInfo {
-  padding-top: 75px;
+  display: flex;
+  /* flex-direction: row; */
+  flex-direction: column;
+  /* align-items: flex-start; */
+  padding-top: 40px;
 }
 
 .dogButtons {
-  padding-top: 120px;
+  position: fixed;
+  right: .1;
+  top: 3;
+
+  float: right;
 }
 

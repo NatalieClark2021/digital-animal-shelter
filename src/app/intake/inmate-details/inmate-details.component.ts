@@ -23,13 +23,17 @@ constructor(
 
     // this.dog = this.dogs[this.idx - 1]
 
+    onRelease(){
+      this.intakeService.releaseDog(this.idx);
+      console.log(this.idx);
+    }
 
 
 
     ngOnInit(): void {
       this.route.params.subscribe((params: Params) => {
         this.idx = +params['id'];
-        this.dog = this.intakeService.getDog(this.idx-1);
+        this.dog = this.intakeService.getDog(this.idx);
       });
     }
 }

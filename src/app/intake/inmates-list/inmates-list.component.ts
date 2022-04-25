@@ -20,6 +20,10 @@ export class InmateComponent implements OnInit {
 
   ngOnInit(): void {
     this.DOGS = this.intakeService.getDogs();
+
+    this.intakeService.dogsChanged.subscribe(DOGS => {
+      this.DOGS = DOGS
+    });
   }
 
 }
