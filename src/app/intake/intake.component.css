@@ -1,20 +1,39 @@
+/* .intakeBack {
 
-.intakeBack {
+  background-color:  #483253;
+} */
 
-  background-color:  #d1e8e2;
-}
+/* .con1 {
+  display: flex;
+  justify-content: center;
+} */
+
 
 .intakeCol{
-  background-color: #fef9c7;
-  border: 5px solid #d1e8e2;;
-
+  background-color: #ffd1e8;
+  border: 5px solid #f580c8;
+  border-radius:  4px;
+  /* max-width: 30%;
+  overflow: hidden; */
 }
 .addshelter {
   border-style: ridge;
 }
 
+.ic-sticky-frame {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  max-height: 100vh;
+  padding: 24px 12px 4.5rem 24px;
+  box-sizing: border-box;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  overflow-x: hidden;
+}
+/*
 .sDwell {
   padding-left: 80px;
   display: flex;
   justify-content: flex-start;
-}
+} */

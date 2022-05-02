@@ -1,8 +1,11 @@
-.listOf {
+
+ .listOf {
   display: flex;
-  /* flex-direction: row; */
   flex-wrap: wrap;
-  /* align-items: flex-start; */
+  justify-content: space-between;
+  height: 500px;
+  list-style-type: none;
+  width: 400px;
 }
 
 .descOf {
@@ -12,3 +15,7 @@
   text-overflow: ellipsis;
   -o-text-overflow: ellipsis;
 }
+
+/* .list-item {
+  list-style-type: none;
+} */

@@ -1,23 +1,48 @@
+<div>
+  <div class="list">
+    <ul class="content listOf">
+      <li *ngFor="let dog of DOGS; let i = index">
 
-<div class="container">
- <div class="col-md-6 listOf" >
-<ul class= "content" *ngFor = "let dog of DOGS; let i = index">
-  <button [routerLink]="['inmate/', i ]"
-  style = "height: 175px; width: 190px;">
-  <img src = "{{dog.imagePath}}"
-  alt = "{{dog.name}}"
-  class = "responsive"
-  style = "max-height: 100px">
 
-  <h4 class="list-group-item-heading">
-    {{dog.name}}
-  </h4>
-  <p class = "list-group-item-text descOf">
-    {{dog.desc}}
-  </p>
+      <button [routerLink]="['inmate/', i]" style="height: 150px; width: 175px">
+        <img
+          src="{{ dog.imagePath }}"
+          alt="{{ dog.name }}"
+          class="responsive"
+          style="max-height: 100px"
+        />
+
+        <h4 class="list-group-item-heading">
+          {{ dog.name }}
+        </h4>
+        <p class="list-group-item-text descOf">
+          {{ dog.desc }}
+        </p>
+      </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- <div class="container">
+  <button
+  *ngFor = "let dog of DOGS; let i = index"
+  [routerLink]="['inmate/', i ]"
+  style="background: rgb(231, 148, 190)"
+  >
+
+  <div>
+    <img src = "{{dog.imagePath}}"
+      alt = "{{dog.name}}"
+      class = "responsive"
+      style = "max-height: 100px;border: 1px solid rgb(53, 37, 40); border-radius: 3px;">
+    <h4 class="list-group-item-heading">
+      {{dog.name}}
+    </h4>
+    <p class = "list-group-item-text descOf">
+      {{dog.desc}}
+    </p>
+  </div>
+
 </button>
-
-
-</ul>
-</div>
+</div> -->
 </div>

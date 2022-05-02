@@ -1,24 +1,29 @@
 .dogSide {
-    display: flex;
-    /* flex-direction: row; */
-    flex-wrap: wrap;
-    /* align-items: flex-start; */
-    background-color: #7d738b;
-  }
-
-.dogInfo {
   display: flex;
   /* flex-direction: row; */
-  flex-direction: column;
+  flex-wrap: wrap;
   /* align-items: flex-start; */
-  padding-top: 40px;
+  background-color: #7d738b;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.dogInfo {
+display: flex;
+/* flex-direction: row; */
+flex-direction: column;
+/* align-items: flex-start; */
+padding-top: 40px;
 }
 
 .dogButtons {
-  position: fixed;
-  right: .1;
-  top: 3;
+align-self:auto;
+right: .1;
+top: 3;
 
-  float: right;
+float: right;
 }
 
+.responsive {
+  border-bottom: 1px solid black;
+}

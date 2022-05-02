@@ -9,6 +9,8 @@ import { IntakeComponent } from './intake/intake.component';
 import { KeepersComponent } from './keepers/keepers.component';
 import { HeaderComponent } from './header/header.component';
 import { InmateDetailsComponent } from './intake/inmate-details/inmate-details.component';
+import { IntakeService } from './intake/intake.service';
+
 
 
 @NgModule({
@@ -18,14 +20,14 @@ import { InmateDetailsComponent } from './intake/inmate-details/inmate-details.c
     KeepersComponent,
     InmateComponent,
     HeaderComponent,
-    InmateDetailsComponent
+    InmateDetailsComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [IntakeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
