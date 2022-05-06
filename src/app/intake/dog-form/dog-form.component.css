@@ -1,0 +1,17 @@
+.row {
+  display: flex;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  /* align-items: flex-start; */
+  background-color: #7d738b;
+  border: 2px solid black;
+  border-radius: 4px;
+}
+
+.dogInfo {
+  padding-top: 100px;
+  /* flex-direction: row; */
+  flex-direction: column;
+  /* align-items: flex-start; */
+
+  }

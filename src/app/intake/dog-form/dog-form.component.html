@@ -1,0 +1,68 @@
+<!-- <div >
+  <div class="div col-md-12">
+    <div class="row dogSide" style="height: 400px">
+      <div class="col-md-5">
+    <h2>Inmate #{{ dog.id }}</h2>
+
+    <img src = "{{dog.imagePath}}" class="responsive" style="height: 225px; width: 225px">
+      </div>
+    <div class="col-md-6 ">
+      <div class="row dogInfo">
+        <h1 > {{dog.name}} </h1>
+        <p> {{dog.desc}}</p>
+
+      </div>
+      <div class="row dogButtons">
+      <div class="col-md-12 ">
+
+      </div>
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+</div> -->
+
+<div>
+  <div class="col-md-12">
+    <div class="row" style="height:400px">
+      <div class="col-md-5">
+       <h2> Intake Form</h2>
+       <h3>img</h3>
+       <button> dice</button>
+      </div>
+      <div class="col-md-6">
+        <button type="button" class="close" aria-label="Close"> x </button>
+
+          <form class="dogInfo">
+            <div class="form-group">
+              <label for="name"> Name </label>
+              <input
+              type="text"
+              id="name"
+              name="name"
+              class="form-control"
+              required>
+            </div>
+            <div class="form-group">
+              <label for="desc"> Description </label>
+              <input
+              type="text"
+              id="desc"
+              name="desc"
+              class="form-control"
+              style="height: 100px">
+
+            </div>
+            <button>
+              Submit
+            </button>
+
+          </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>

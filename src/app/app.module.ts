@@ -13,6 +13,7 @@ import { IntakeService } from './intake/intake.service';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,7 @@ import { IntakeService } from './intake/intake.service';
     KeepersComponent,
     InmateComponent,
     HeaderComponent,
-    InmateDetailsComponent,
+    InmateDetailsComponent
   ],
   imports: [
     BrowserModule,
