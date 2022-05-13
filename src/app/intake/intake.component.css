@@ -31,9 +31,12 @@
   overscroll-behavior-y: contain;
   overflow-x: hidden;
 }
-/*
+
 .sDwell {
-  padding-left: 80px;
+  margin: 0 0;
+  padding-bottom: 15px;
   display: flex;
   justify-content: flex-start;
-} */
+}
+
+

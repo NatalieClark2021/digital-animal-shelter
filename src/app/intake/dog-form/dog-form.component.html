@@ -4,8 +4,17 @@
     <div class="row" style="height: 400px">
       <div class="col-md-5">
         <h2>Intake Form</h2>
-        <h3>img</h3>
-        <button>dice</button>
+        <img
+        src="{{ dog.imagePath }}"
+        alt="{{ dog.name }}"
+        class="responsive"
+        style="height: 225px; width: 225px"
+      />
+        <div class="holdDice">
+        <span  class="material-symbols-outlined dice" (click)="onSpanClick()" style="cursor:pointer">
+          casino
+        </span>
+      </div>
       </div>
       <div class="col-md-6">
         <button type="button" class="close" aria-label="Close">x</button>

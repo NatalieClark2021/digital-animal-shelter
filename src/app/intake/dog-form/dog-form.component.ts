@@ -52,11 +52,13 @@ export class DogFormComponent implements OnInit {
     // formObj.reset();
     this.intakeService.editDog(newDog)
 
-
     }
     else {
 
       this.intakeService.newDog(newDog);
     }
+  }
+  onSpanClick(){
+    console.log("Span click")
   }
 }

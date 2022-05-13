@@ -1,6 +1,13 @@
 .navTop {
   padding-bottom: 0px;
 }
+.navbar-brand {
+  float: left;
+  height: 50px;
+  padding: 6.3px 5px;
+  font-size: 19px;
+  line-height: 20px;
+}
 .container-fluid{
   background-color: #33162f;
 }
@@ -16,3 +23,12 @@
   color: rgb(160, 38, 38);
 }
 
+.shelterSkelter{
+  display: flex;
+  align-items: center;
+}
+
+.paw{
+  padding-bottom: 5px;
+  padding-left: 3px;
+}

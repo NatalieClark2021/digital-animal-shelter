@@ -39,3 +39,15 @@
   box-shadow:4px 4px 10px rgba(0,0,0,0.06);
   height:150px;
 }
+
+.responsive {
+  border-bottom: 1px solid black;
+}
+.holdDice{
+  padding-top: 5px;
+  padding-left: 200px;
+}
+.dice {
+  background-color: white;
+  border-radius: 5px;
+}
