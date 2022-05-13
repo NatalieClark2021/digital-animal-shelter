@@ -75,19 +75,19 @@ export class IntakeService{
 
   //read 1 dogs info
 getDog(idx: number){
-  return this.DOGS[idx];
+  return this.DOGS.filter(dog => dog.id == idx)[0];
 }
 
 //release dog/delete
   releaseDog(idx: number) {
     if (idx === -1) return;
-    var dog: Dog = this.DOGS.filter(dog => dog.id == idx)[0]
+    var dog: Dog = this.getDog(idx)
     this.DOGS.splice(this.DOGS.indexOf(dog),1);
     this.dogsChanged.emit(this.DOGS.slice())
   }
 
   editDog(dog: Dog): void {
-    var existingDog = this.DOGS.find( d => d.id == dog.id)
+    var existingDog = this.getDog(dog.id)
     existingDog.name = dog.name;
     existingDog.desc = dog.desc;
     this.dogsChanged.emit(this.DOGS.slice())
