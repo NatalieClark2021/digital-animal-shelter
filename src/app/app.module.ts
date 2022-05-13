@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+
+
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
@@ -10,6 +11,8 @@ import { KeepersComponent } from './keepers/keepers.component';
 import { HeaderComponent } from './header/header.component';
 import { InmateDetailsComponent } from './intake/inmate-details/inmate-details.component';
 import { IntakeService } from './intake/intake.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DogFormComponent } from './intake/dog-form/dog-form.component';
 
 
 
@@ -21,11 +24,13 @@ import { IntakeService } from './intake/intake.service';
     KeepersComponent,
     InmateComponent,
     HeaderComponent,
-    InmateDetailsComponent
+    InmateDetailsComponent,
+    DogFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule
   ],
   providers: [IntakeService],

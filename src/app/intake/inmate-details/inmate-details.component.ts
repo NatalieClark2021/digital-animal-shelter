@@ -24,8 +24,8 @@ constructor(
     // this.dog = this.dogs[this.idx - 1]
 
     onRelease(){
-      this.intakeService.releaseDog(this.idx);
-      console.log(this.idx);
+      this.intakeService.releaseDog(this.dog.id);
+      console.log(this.dog.id);
     }
 
 

@@ -10,7 +10,8 @@ const appRoutes: Routes = [
   {path: "", redirectTo: "/intake", pathMatch: "full"},
   { path: "intake", component: IntakeComponent,
   children: [{path: 'inmate/:id' , component: InmateDetailsComponent},
-  {path: "dogform", component: DogFormComponent}]},
+  {path: "dogform", component: DogFormComponent},
+  {path: "dogform/:id", component: DogFormComponent}]},
   { path: "keepers", component: KeepersComponent},
 ]
 

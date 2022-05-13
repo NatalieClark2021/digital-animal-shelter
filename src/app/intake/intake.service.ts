@@ -56,6 +56,13 @@ export class IntakeService{
 ]
 //create new dog
   newDog(dog: Dog) {
+    var id = 0;
+    this.DOGS.forEach( dog => {
+      if (dog.id > id) {
+        id = dog.id
+      }
+    });
+    dog.id = id++
     this.DOGS.push(dog);
     this.dogsChanged.emit(this.DOGS.slice());
   }
@@ -74,9 +81,16 @@ getDog(idx: number){
 //release dog/delete
   releaseDog(idx: number) {
     if (idx === -1) return;
-    this.DOGS.splice(idx,1);
+    var dog: Dog = this.DOGS.filter(dog => dog.id == idx)[0]
+    this.DOGS.splice(this.DOGS.indexOf(dog),1);
     this.dogsChanged.emit(this.DOGS.slice())
+  }
 
+  editDog(dog: Dog): void {
+    var existingDog = this.DOGS.find( d => d.id == dog.id)
+    existingDog.name = dog.name;
+    existingDog.desc = dog.desc;
+    this.dogsChanged.emit(this.DOGS.slice())
   }
 }
 
