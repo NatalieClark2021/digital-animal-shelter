@@ -1,10 +1,14 @@
 
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core'
+import { Observable } from 'rxjs';
 
 import { Dog } from './intake.module'
 @Injectable({
   providedIn: 'root',
 })
+
+
 export class IntakeService{
   selectedDog = new EventEmitter();
   dogsChanged = new EventEmitter();
@@ -54,15 +58,20 @@ export class IntakeService{
     ),
 
 ]
+
+
+constructor(private http: HttpClient) {}
+
 //create new dog
   newDog(dog: Dog) {
     var id = 0;
     this.DOGS.forEach( dog => {
       if (dog.id > id) {
         id = dog.id
+        dog.id = id++
       }
     });
-    dog.id = id++
+
     this.DOGS.push(dog);
     this.dogsChanged.emit(this.DOGS.slice());
   }
@@ -75,7 +84,9 @@ export class IntakeService{
 
   //read 1 dogs info
 getDog(idx: number){
+  console.log(this.DOGS.filter(dog => dog.id == idx)[0]);
   return this.DOGS.filter(dog => dog.id == idx)[0];
+
 }
 
 //release dog/delete
@@ -88,10 +99,23 @@ getDog(idx: number){
 
   editDog(dog: Dog): void {
     var existingDog = this.getDog(dog.id)
-    existingDog.name = dog.name;
-    existingDog.desc = dog.desc;
+    existingDog.name = dog?.name;
+    existingDog.desc = dog?.desc;
+    existingDog.imagePath = dog?.imagePath;
     this.dogsChanged.emit(this.DOGS.slice())
   }
+
+
+//API stuff
+
+  getDogInfo(image_id: string): Observable<any>{
+   let imgApi = `https:api.thedogapi.com/v1/images/${image_id}`
+   let header =  {
+    headers: new HttpHeaders({
+      'x-api-key': '892666d1-8bc8-400f-8df5-f3882827134a'
+    })
+  }
+   return this.http.get<any>(imgApi, header)
+
+  }
 }
-
-

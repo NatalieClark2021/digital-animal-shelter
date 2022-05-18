@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, NgForm } from '@angular/forms';
 import { ActivatedRoute, Params } from '@angular/router';
@@ -24,10 +25,12 @@ export class DogFormComponent implements OnInit {
 
   constructor(
     private intakeService: IntakeService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private http: HttpClient
   ) {}
 
   ngOnInit(): void {
+      this.isEditMode = false;
     this.route.params.subscribe((params: Params) => {
       this.idx = +params['id'];
       if(!isNaN(this.idx)) {
@@ -42,13 +45,13 @@ export class DogFormComponent implements OnInit {
   onFormSubmit(formObj: NgForm) {
     // this.dogDetails.name = formObj.value.name;
     // this.dogDetails.desc = formObj.value.desc;
-    var newDog = new Dog(
+    let newDog = new Dog(
       this.nameControl.value,
       this.dog?.id,
       this.descControl.value,
       this.dog?.imagePath
       );
-    if (this.isEditMode == true) {
+    if (!!this.dog.id) {
     // formObj.reset();
     this.intakeService.editDog(newDog)
 
@@ -58,7 +61,29 @@ export class DogFormComponent implements OnInit {
       this.intakeService.newDog(newDog);
     }
   }
-  onSpanClick(){
-    console.log("Span click")
+
+  onDiceClick(){
+  // this.dog.imagePath = this.http.get('https:api.thedogapi.com/v1/images/{image_id}')
+  // .subscribe((randomResponse)=>
+  // console.log('randomResponse', randomResponse))
+  //  console.log(this.dog.imagePath);
+  //  console.log(this.http.get('https:api.thedogapi.com/v1/images/{image_id}'));
+  var arry = [
+    'xbI13teuJ',
+    '4UKTN_dQ5',
+    'HkAVQl9VX',
+    '3PxLoudtK',
+    '0yxSqpNj4',
+    '2E-WqpLr5'
+
+  ]
+  var index = Math.floor(Math.random() * arry.length)
+  this.intakeService.getDogInfo(arry[index]).subscribe( img => {
+    console.log(img.url)
+    this.dog.imagePath = img.url;
+    })
+
+
   }
+
 }
