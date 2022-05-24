@@ -13,6 +13,7 @@ import { InmateDetailsComponent } from './intake/inmate-details/inmate-details.c
 import { IntakeService } from './intake/intake.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DogFormComponent } from './intake/dog-form/dog-form.component';
+// import { DogFormComponent } from './intake/dog-form/dog-form.component';
 
 
 
@@ -26,6 +27,7 @@ import { DogFormComponent } from './intake/dog-form/dog-form.component';
     HeaderComponent,
     InmateDetailsComponent,
     DogFormComponent
+
   ],
   imports: [
     BrowserModule,

@@ -62,9 +62,9 @@ export class DogFormComponent implements OnInit {
     }
   }
 
-  onX(){
-    console.log('x');
-  }
+  // onX(){
+  //   console.log('x')
+  // }
   onDiceClick(){
   // this.dog.imagePath = this.http.get('https:api.thedogapi.com/v1/images/{image_id}')
   // .subscribe((randomResponse)=>

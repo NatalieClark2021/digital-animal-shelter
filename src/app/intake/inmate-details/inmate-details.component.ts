@@ -14,6 +14,7 @@ import { IntakeService } from '../intake.service';
 export class InmateDetailsComponent implements OnInit {
   idx : number;
   dog : Dog;
+  isFave = false;
 
 constructor(
   private intakeService: IntakeService,

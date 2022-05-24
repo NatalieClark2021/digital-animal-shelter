@@ -10,8 +10,9 @@
 
 
 .intakeCol{
-  background-color: #ffd1e8;
-  border: 5px solid #f580c8;
+  height: 100%;
+  background-color: #f0d1e0;
+  border: 5px solid #5f2c51;
   border-radius:  4px;
   /* max-width: 30%;
   overflow: hidden; */
@@ -33,6 +34,7 @@
 }
 
 .sDwell {
+
   margin: 0 0;
   padding-bottom: 15px;
   display: flex;
