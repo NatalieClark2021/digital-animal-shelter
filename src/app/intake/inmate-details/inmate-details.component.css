@@ -1,3 +1,8 @@
+
+.outside{
+  padding-top: 15px;
+}
+
 .dogSide {
   display: flex;
   /* flex-direction: row; */
@@ -33,4 +38,11 @@ float: right;
     padding-top: 5px;
     padding-left: 320px;
 
+}
+
+.heart {
+  background-color: rgb(255, 81, 110);
+  border-radius: 20px;
+  padding-right: 1.5px;
+  padding-top: 1.5px;
 }

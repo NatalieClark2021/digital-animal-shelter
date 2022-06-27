@@ -11,9 +11,10 @@
 
 .intakeCol{
   height: 100%;
-  background-color: #f0d1e0;
-  border: 5px solid #5f2c51;
-  border-radius:  4px;
+  background-color: #ffb3d6;
+  border: 5px solid #c25496;
+
+  border-top: 2px solid rgb(223, 67, 145);
   /* max-width: 30%;
   overflow: hidden; */
 }
@@ -31,7 +32,37 @@
   overflow-y: auto;
   overscroll-behavior-y: contain;
   overflow-x: hidden;
+
 }
+
+/* ::-webkit-scrollbar {
+  background: rgb(44, 44, 44);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(83, 83, 83);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+} */
+/* ::-webkit-scrollbar {
+  background: rgb(44, 44, 44);
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px rgb(83, 83, 83);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(100, 100, 100);
+  border-radius: 10px;
+} */
 
 .sDwell {
 

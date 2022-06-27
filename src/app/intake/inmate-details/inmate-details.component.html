@@ -29,7 +29,7 @@
 
 
 
-<div >
+<div class="outside">
   <div class="div col-md-12">
     <div class="row dogSide" style="height: 400px">
       <div class="col-md-5">
@@ -39,7 +39,11 @@
       </div>
     <div class="col-md-6 ">
       <div class="holdHeart">
-        <span class="material-symbols-outlined" style="cursor:pointer">
+        <span
+
+        class="material-symbols-outlined heart"
+        (click)="onFave()"
+        style="cursor:pointer">
           favorite
           </span>
       </div>

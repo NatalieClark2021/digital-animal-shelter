@@ -1,3 +1,8 @@
+
+.outside{
+  padding-top: 15px;
+}
+
 .row {
   display: flex;
   /* flex-direction: row; */

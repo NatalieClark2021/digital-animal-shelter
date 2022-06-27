@@ -29,7 +29,10 @@ constructor(
       console.log(this.dog.id);
     }
 
-
+    onFave(){
+      this.isFave = !this.isFave;
+      console.log(this.isFave);
+    }
 
     ngOnInit(): void {
       this.route.params.subscribe((params: Params) => {
